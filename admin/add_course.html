@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+{% block body %}
+<h2 class="title" align="center">COURSE DETAILS</h2>
+<form action="/admin_add_course_post" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table class="table table-bordered ">
+    <tr>
+      <th>Course Name</th>
+      <td>
+      <input type="text" name="textfield" id="textfield" class="form-control"  required/></td>
+    </tr>
+    <tr>
+      <th>Duration</th>
+      <td><input type="text" name="textfield2" id="textfield2"  class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>Chapters</th>
+      <td><input type="text" name="textfield3" id="textfield3"  class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><input type="text" name="textfield4" id="textfield4" class="form-control" required /></td>
+    </tr>
+     <tr>
+      <td colspan="2" align="center"><input type="submit" name="button" id="button" value="Add" class="btn btn-success" /></td>
+    </tr>
+         </table>
+</form>
+
+
+{% endblock %}

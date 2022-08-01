@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block body %}
+        <table  class="table table-bordered ">
+            <tr>
+                <th></th>
+                <th>COURSE NAME</th>
+                <th>DURATION</th>
+                <th>CHAPTERS</th>
+                <th>DESCRIPTION</th>
+            </tr>
+            {% for i in data %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ i["course_name"] }}</td>
+                <td>{{ i["duration"] }}</td>
+                <td>{{ i["chapters"] }}</td>
+                <td>{{ i["description"] }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+  {% endblock %}

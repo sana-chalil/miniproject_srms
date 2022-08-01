@@ -1,0 +1,37 @@
+{% extends 'parent_index.html' %}
+{% block body %}
+<h2 class="title" align="center">View Result</h2>
+<form name="f1"  action="/view_results_parent_post" method="post">
+    <table class="table table-bordered">
+        <tr>
+            <td>Roll Number</td>
+            <td><input type="text" name="textfield" id="textfield" class="form-control" required></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><input type="submit" name="s1" value="Search" class="btn btn-success"></td>
+        </tr>
+    </table>
+
+        <table class="table table-bordered ">
+            <tr>
+                <th>ROLL NO</th>
+                <th>STUDENT NAME</th>
+                <th>COURSE NAME</th>
+                <th>MARK OBTAINED</th>
+                <th>FULL MARK</th>
+                <th>PERCENTAGE</th>
+
+            </tr>
+            {% for i in data %}
+            <tr>
+                <td>{{ i["roll_no"] }}</td>
+                <td>{{ i["student_name"] }}</td>
+                <td>{{ i["course_name"] }}</td>
+                  <td>{{ i["mark_obtained"] }}</td>
+                <td>{{ i["total_mark"] }} </td>
+                <td>{{ i["percentage"] }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+</form>
+ {% endblock %}

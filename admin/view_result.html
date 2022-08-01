@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% block body %}
+<h2 class="title" align="center">View Result</h2>
+<form name="f1" method="post" action="/view_result">
+        <table class="table table-bordered ">
+            <tr>
+                <th>ROLL NO</th>
+                <th>STUDENT NAME</th>
+                <th>COURSE NAME</th>
+                <th>MARK OBTAINED</th>
+                <th>FULL MARK</th>
+                <th>PERCENTAGE</th>
+
+            </tr>
+            {% for i in data %}
+            <tr>
+                <td>{{ i["roll_no"] }}</td>
+                <td>{{ i["student_name"] }}</td>
+                <td>{{ i["course_name"] }}</td>
+                  <td>{{ i["mark_obtained"] }}</td>
+                <td>{{ i["total_mark"] }} </td>
+                <td>{{ i["percentage"] }} </td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+</form>
+ {% endblock %}

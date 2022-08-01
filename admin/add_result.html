@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% block body %}
+<h2 class="title" align="center">ADD STUDENT RESULT</h2>
+<form action="/add_result_post" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table class="table table-bordered ">
+    <tr>
+      <th>Roll Number</th>
+      <td>
+      <input type="number" name="textfield" id="textfield" class="form-control"  required/></td>
+    </tr>
+    <tr>
+      <th>Student Name</th>
+      <td><input type="text" name="textfield2" id="textfield2"  class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>Course Name</th>
+      <td><input type="text" name="textfield3" id="textfield3"  class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>Mark Obtained</th>
+      <td><input type="text" name="textfield4" id="textfield4" class="form-control" required /></td>
+    </tr>
+      <tr>
+      <th>Full Mark</th>
+      <td><input type="text" name="textfield5" id="textfield5" class="form-control" required /></td>
+    </tr>
+     <tr>
+      <td colspan="2" align="center"><input type="submit" name="button" id="button" value="Add" class="btn btn-success" /></td>
+    </tr>
+         </table>
+</form>
+
+
+{% endblock %}
+
+
+
+
+
+
